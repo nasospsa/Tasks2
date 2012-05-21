@@ -2,7 +2,7 @@
 
 class User
 {
-    static function _getUserLvlArray() {
+    static function getUserLvlArray() {
         $userLevels = array();
         $userLevels[0] = 'Super Admin';
         $userLevels[1] = 'Administrator';
@@ -12,7 +12,7 @@ class User
         return $userLevels;
     }
     
-    static function _getUserLvl($lvl) {
+    static function getUserLvl($lvl) {
         $userLevels = $this->_getUserLvlArray();
         return isset($userLevels[$lvl])?$userLevels[$lvl]:false;
     }
