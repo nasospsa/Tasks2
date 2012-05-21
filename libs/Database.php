@@ -8,7 +8,8 @@ class Database {
 
     protected $_connection;
 
-    function Database() {
+    function __construct()
+    {
         $this->_connection = mysql_connect(self::server, self::user, self::pass) or die(mysql_error());
         mysql_select_db(self::db, $this->_connection) or die(mysql_error());
         mysql_set_charset('utf8');

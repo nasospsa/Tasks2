@@ -1,24 +1,12 @@
 <?php
+
 require_once 'Autoload.php';
 
-Class Project
-{
-	
+Class Project {
 
-	public $tasks;
-	protected $_asdf;
+    public $tasks;
 
-	static function getDate()
-	{
-		return getDate();
-	}
-	
-
-
-	function somethingintheway()
-	{
-		echo "asdfadsf";
-	}
+    
 
 }
 
