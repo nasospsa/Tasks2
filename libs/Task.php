@@ -2,17 +2,19 @@
 
 class Task {
     
-    function action_newTask($taskArray) {
-        list ($title, $desc, $priority, $assignedto, $project) = $taskArray;
-        $assigned_array = explode(",", $assignedto);
+    function action_newTask($taskArray)
+    {
+        list ($title, $desc, $priority, $assignedTo, $project) = $taskArray;
+        $assigned_array = explode(",", $assignedTo);
         
         //Check assigned users array!
         //$self_array[] = $this->username;
 
         $not_eligible_users = $this->array_in_array_mistakes($assigned_array, $this->getUsers_on_Project($project, SERIALIZED_NONCLIENT));
-        
     }
-    function newtask($title, $desc, $priority, $assignedto, $project) {
+
+    function newtask($title, $desc, $priority, $assignedto, $project)
+    {
         global $database, $form, $mailer;  //The database, form and mailer object
 
         $assigned_array = explode(",", $assignedto);
